@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_jj_sl_search_blood_donor_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Search Blood Donor SL JJ</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/JobinAndJismi/OTP-9610-OTP-Search And Filter Through Blood Donors/_jj_sl_search_blood_donors_.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploycustomscript_jj_sl_search_bl">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>ERROR</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>Search Blood Donor SL JJ</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
