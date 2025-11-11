@@ -2,12 +2,44 @@
  * @NApiVersion 2.1
  * @NScriptType ClientScript
  */
+
+/************************************************************************************************ 
+ *  
+ * OTP-9610 : Search through the database to find the matching blood donors Client Script
+ * 
+ ************************************************************************************************* 
+ * 
+ * Author: Jobin and Jismi IT Services 
+ * 
+ * Date Created : 23-October-2025 
+ * 
+ * Description : Client Script validates blood group and donation date fields before submission helps to
+ * load blood donor details retrieved from search form and Ensures both fields are filled and the donation 
+ * date is at least 90 days old and not in the future.
+ * 
+ * REVISION HISTORY
+ *
+ * @version 1.0 : 23-October-2025 : Initial version by JJ0417
+ * 
+ *************************************************************************************************/ 
+
 define(['N/ui/dialog'], function (dialog) {
 
+    /**
+     * Executes on page load.
+     * @param {Object} context - Script context.
+     */
     function pageInit(context) {
         console.log('Client Script Loaded');
     }
 
+    /**
+     * Validates the donation date.
+     * Ensures the date is not in the future and is at least 90 days old.
+     *
+     * @param {string|Date} donationDate - The selected donation date.
+     * @returns {{valid: boolean, message?: string}} Validation result.
+     */
     function validateDate(donationDate) {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
@@ -31,6 +63,13 @@ define(['N/ui/dialog'], function (dialog) {
         return { valid: true };
     }
 
+    /**
+     * Validates required fields and donation date before record is saved.
+     *
+     * @param {Object} context - Save context.
+     * @param {Record} context.currentRecord - Current record in the form.
+     * @returns {boolean} Whether the record can be saved.
+     */
     function saveRecord(context) {
         try {
             const record = context.currentRecord;
