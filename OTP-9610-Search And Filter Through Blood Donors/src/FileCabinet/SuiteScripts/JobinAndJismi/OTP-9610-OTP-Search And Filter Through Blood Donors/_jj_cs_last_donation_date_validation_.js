@@ -56,7 +56,7 @@ define(['N/ui/dialog'], function (dialog) {
         if (diffDays < 90) {
             return {
                 valid: false,
-                message: 'Date must be at least 90 days ago.\nDays entered: ' + diffDays + ' days'
+                message: 'Date must be at least 90 days ago \nDays entered: ' + diffDays + ' days'
             };
         }
 
