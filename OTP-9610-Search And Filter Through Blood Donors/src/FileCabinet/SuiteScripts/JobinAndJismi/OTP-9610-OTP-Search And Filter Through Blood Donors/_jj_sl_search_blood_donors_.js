@@ -136,7 +136,7 @@ function (serverWidget, search, log) {
                         type: serverWidget.FieldType.INLINEHTML,
                         label: ' '
                     });
-                    noResultMsg.defaultValue = '<p>No eligible donors found for selected criteria.</p>';
+                    noResultMsg.defaultValue = '<p>No eligible donors found for selected criteria</p>';
                 }
 
             } catch (e) {
